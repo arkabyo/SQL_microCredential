@@ -18,13 +18,13 @@ SELECT DISTINCT RENTAL_RATE FROM FILM
 -- A customer left us some feedback about our store.  Write a query to find her email address – for Nancy Thomas.
 
 -- SELECT * FROM CUSTOMER 
-SELECT C.EMAIL
+SELECT C.FIRST_NAME, C.LAST_NAME, C.EMAIL
 FROM CUSTOMER C
 WHERE UPPER(C.FIRST_NAME) = 'NANCY' AND UPPER(C.LAST_NAME) = 'THOMAS'
 
 -- We’re trying to find a customer located at a certain address ‘259 Ipoh Drive’ – can you find their phone number? 
 -- SELECT A.Phone, A.ADDRESS, C.FIRST_NAME
-SELECT A.Phone
+SELECT C.First_Name, C.Last_Name, A.Phone
 FROM ADDRESS A
 INNER JOIN CUSTOMER C
 ON A.ADDRESS_ID = C.ADDRESS_ID
