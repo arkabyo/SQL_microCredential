@@ -1,0 +1,21 @@
+-- Join the film to the film_actor table.
+SELECT *
+FROM FILM F
+INNER JOIN FILM_ACTOR FA
+ON F.FILM_ID = FA.FILM_ID
+
+-- Join the actor table to the film_actor table. 
+SELECT *
+FROM ACTOR A
+JOIN FILM_ACTOR FA
+ON A.ACTOR_ID = FA.ACTOR_ID
+
+-- Try to join the actor, film_actor, and film table together (3 joins!)
+SELECT A.FIRST_NAME ACTOR_FIRST_NAME, A.LAST_NAME ACTOR_LAST_NAME, F.TITLE FILM_NAME, F.RELEASE_YEAR, F.LENGTH, F.RATING
+FROM ACTOR A
+JOIN FILM_ACTOR FA
+ON A.ACTOR_ID = FA.ACTOR_ID
+JOIN FILM F
+ON F.FILM_ID = FA.FILM_ID
+
+-- 
